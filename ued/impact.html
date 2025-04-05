@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Tracker - ReNova</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://clothedup.com/wp-content/uploads/2020/08/image-1-2048x1536.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            backdrop-filter: blur(8px);
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px 15px;
+            border-radius: 12px;
+            transition: 0.3s;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
+        }
+
+        .container {
+            padding-top: 120px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2.5rem;
+            color: #FFEB3B;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .impact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .impact-box {
+            background: white;
+            color: #333;
+            padding: 25px;
+            border-radius: 15px;
+            width: 260px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        .impact-box h2 {
+            font-size: 2.2rem;
+            color: #00897B;
+        }
+
+        .impact-box p {
+            font-size: 1.1rem;
+        }
+
+        .impact-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            font-size: 1rem;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-item {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+
+            .impact-box {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-item"><a href="index.html">Home</a></div>
+        <div class="nav-item"><a href="community.html">Communities</a></div>
+        <div class="nav-item active"><a href="impact.html">Impact Tracker</a></div>
+        <div class="nav-item"><a href="shop.html">Shop</a></div>
+        <div class="nav-item"><a href="sell.html">Sell</a></div>
+        <div class="nav-item"><a href="contact.html">Contact</a></div>
+    </nav>
+
+    <div class="container">
+        <h1>Impact Tracker</h1>
+        <div class="impact-grid">
+            <div class="impact-box">
+                <h2>5,200+</h2>
+                <p>Clothes Recycled</p>
+            </div>
+            <div class="impact-box">
+                <h2>18,000kg</h2>
+                <p>CO₂ Saved</p>
+            </div>
+            <div class="impact-box">
+                <h2>3,100+</h2>
+                <p>Community Members</p>
+            </div>
+            <div class="impact-box">
+                <h2>820kg</h2>
+                <p>Plastic Eliminated</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Every action counts. Let’s track our impact together 🌿</p>
+    </footer>
+
+</body>
+</html>

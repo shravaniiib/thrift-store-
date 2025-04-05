@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReNova - Sustainability Hub</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Press+Start+2P&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://clothedup.com/wp-content/uploads/2020/08/image-1-2048x1536.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            backdrop-filter: blur(8px);
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .nav-item {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px 15px;
+            border-radius: 12px;
+            transition: 0.3s;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+        }
+        .nav-item:hover, .nav-item.active {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
+        }
+        .search-bar {
+            padding: 8px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            width: 180px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding-top: 120px;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            font-family: 'Press Start 2P', cursive;
+            color: #FFEB3B;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+        }
+        p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .communities {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 90%;
+            margin-top: 50px;
+        }
+        .community {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: 0.3s;
+            width: 250px;
+            text-align: center;
+        }
+        .community h3 {
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .community span {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #00897B;
+        }
+        .community:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            font-size: 1rem;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .nav-item {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+            .search-bar {
+                width: 150px;
+                font-size: 0.9rem;
+            }
+            .community {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+    <script>
+        function highlightNav(element) {
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+            element.classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-item" onclick="highlightNav(this)"><a href="#">Home</a></div>
+        <div class="nav-item" onclick="highlightNav(this)"><a href="community.html">Communities</a></div>
+        <div class="nav-item" onclick="highlightNav(this)"><a href="impact.html">Impact Tracker</a></div>
+        <div class="nav-item" onclick="highlightNav(this)"><a href="shop.html">Shop</a></div>
+        <div class="nav-item" onclick="highlightNav(this)"><a href="sell.html">Sell</a></div>
+        <div class="nav-item" onclick="highlightNav(this)"><a href="contact.html">Contact</a></div>
+        <input type="text" class="search-bar" placeholder="Search...">
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <h1>ReNova</h1>
+        </div>
+        <p>ReNova is a sustainable thrift store promoting ethical shopping and reducing waste. Join us in making fashion eco-friendly!</p>
+        <div class="communities">
+            <div class="community">
+                <h3>Eco Warriors</h3>
+                <span>1,200 Members</span>
+            </div>
+            <div class="community">
+                <h3>Zero Waste Lifestyle</h3>
+                <span>850 Members</span>
+            </div>
+            <div class="community">
+                <h3>Thrift Enthusiasts</h3>
+                <span>950 Members</span>
+            </div>
+            <div class="community">
+                <h3>Plastic-Free Living</h3>
+                <span>700 Members</span>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p> Making the world greener, one step at a time.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+

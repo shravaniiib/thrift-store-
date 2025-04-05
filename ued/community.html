@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communities - ReNova</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://clothedup.com/wp-content/uploads/2020/08/image-1-2048x1536.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            backdrop-filter: blur(8px);
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px 15px;
+            border-radius: 12px;
+            transition: 0.3s;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
+        }
+
+        .container {
+            padding-top: 120px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2.5rem;
+            color: #FFEB3B;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .community-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .community-card {
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 15px;
+            width: 280px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+            text-align: left;
+        }
+
+        .community-card h3 {
+            color: #00897B;
+            font-size: 1.4rem;
+        }
+
+        .community-card p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .community-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            font-size: 1rem;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-item {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+
+            .community-card {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-item"><a href="index.html">Home</a></div>
+        <div class="nav-item"><a href="community.html">Communities</a></div>
+        <div class="nav-item"><a href="impact.html">Impact Tracker</a></div>
+        <div class="nav-item"><a href="shop.html">Shop</a></div>
+        <div class="nav-item"><a href="sell.html">Sell</a></div>
+        <div class="nav-item"><a href="contact.html">Contact</a></div>
+    </nav>
+
+    <div class="container">
+        <h1>Our Communities</h1>
+        <div class="community-list">
+            <div class="community-card">
+                <h3>Eco Warriors</h3>
+                <p>Fighting for a greener tomorrow. Join hands in tree planting and eco-awareness drives.</p>
+            </div>
+            <div class="community-card">
+                <h3>Zero Waste Lifestyle</h3>
+                <p>Learn, share, and live a life that reduces waste to zero. Tips, swaps & community events.</p>
+            </div>
+            <div class="community-card">
+                <h3>Thrift Enthusiasts</h3>
+                <p>Love second-hand shopping? Find great deals, share finds, and promote circular fashion.</p>
+            </div>
+            <div class="community-card">
+                <h3>Plastic-Free Living</h3>
+                <p>From bamboo toothbrushes to bulk groceries—ditch plastic and find better alternatives.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Join the change. Be the change 💚</p>
+    </footer>
+
+</body>
+</html>

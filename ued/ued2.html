@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReNova - Sustainability Hub</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Press+Start+2P&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.pinimg.com/736x/04/2e/01/042e01507472257ca46f026dbc443a9b.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            backdrop-filter: blur(8px);
+            gap: 20px;
+        }
+        .nav-item {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 12px 24px;
+            border-radius: 12px;
+            transition: 0.3s;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+        }
+        .nav-item:hover, .nav-item.active {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
+        }
+        .search-bar {
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 1.2rem;
+            width: 250px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            font-family: 'Press Start 2P', cursive;
+            color: #FFEB3B;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+            transform: rotate(-5deg);
+        }
+        p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin-bottom: 40px;
+            font-weight: 400;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .communities {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            width: 90%;
+            margin-top: 50px;
+        }
+        .community {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: 0.3s;
+            width: 270px;
+            text-align: center;
+        }
+        .community h3 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-top: 10px;
+            font-weight: 700;
+        }
+        .community span {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #00897B;
+        }
+        .community:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+    </style>
+    <script>
+        function highlightNav(element) {
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+            element.classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-item" onclick="highlightNav(this)"><a href="#">Home</a></div>
+        <div class="nav-item" onclick="highlightNav(this)"><a href="#">Communities</a></div>
+        <div class="nav-item" onclick="highlightNav(this)"><a href="#">Impact Tracker</a></div>
+        <div class="nav-item" onclick="highlightNav(this)"><a href="#">Shop</a></div>
+        <div class="nav-item" onclick="highlightNav(this)"><a href="#">Sell</a></div>
+        <div class="nav-item" onclick="highlightNav(this)"><a href="#">Contact</a></div>
+        <input type="text" class="search-bar" placeholder="Search...">
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <h1>ReNova</h1>
+        </div>
+        <p>ReNova is a sustainable thrift store promoting ethical shopping and reducing waste. Join us in making fashion eco-friendly!</p>
+        <div class="communities">
+            <div class="community">
+                <h3>Eco Warriors</h3>
+                <span>1,200 Members</span>
+            </div>
+            <div class="community">
+                <h3>Zero Waste Lifestyle</h3>
+                <span>850 Members</span>
+            </div>
+            <div class="community">
+                <h3>Thrift Enthusiasts</h3>
+                <span>950 Members</span>
+            </div>
+            <div class="community">
+                <h3>Plastic-Free Living</h3>
+                <span>700 Members</span>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy;  Making the world greener, one step at a time.</p>
+    </footer>
+</body>
+</html>

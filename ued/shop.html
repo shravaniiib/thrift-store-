@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop - ReNova</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Press+Start+2P&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://clothedup.com/wp-content/uploads/2020/08/image-1-2048x1536.jpg') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 15px 10px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      backdrop-filter: blur(8px);
+      gap: 10px;
+      flex-wrap: wrap;
+      z-index: 100;
+    }
+
+    .nav-item {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 10px 15px;
+      border-radius: 12px;
+      transition: 0.3s;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .nav-item a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-item:hover, .nav-item.active {
+      background: rgba(255, 255, 255, 0.5);
+      transform: scale(1.1);
+    }
+
+    .container {
+      padding-top: 120px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 3rem;
+      color: #FFEB3B;
+      text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 30px;
+    }
+
+    .search-container, .filter-container {
+      margin-bottom: 20px;
+    }
+
+    #searchInput {
+      padding: 15px;
+      width: 350px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1.1rem;
+    }
+
+    .filter-container button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      font-weight: bold;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    .filter-container button:hover,
+    .filter-container button.active {
+      background: #FFEB3B;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .product {
+      background: white;
+      color: #333;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .product h3 {
+      font-size: 1.3rem;
+      margin: 10px 0 5px;
+    }
+
+    .product p {
+      font-size: 1rem;
+      color: #00897B;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.2);
+      font-size: 1rem;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .nav-item {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
+
+      #searchInput {
+        width: 200px;
+        padding: 10px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-item"><a href="index.html">Home</a></div>
+    <div class="nav-item"><a href="community.html">Communities</a></div>
+    <div class="nav-item"><a href="impact.html">Impact Tracker</a></div>
+    <div class="nav-item active"><a href="shop.html">Shop</a></div>
+    <div class="nav-item"><a href="sell.html">Sell</a></div>
+    <div class="nav-item"><a href="contact.html">Contact</a></div>
+  </nav>
+
+  <div class="container">
+    <h1>Let's Shop</h1>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchItems()" />
+    </div>
+
+    <div class="filter-container">
+      <button class="filter-btn active" onclick="filterCategory('all')">All</button>
+      <button class="filter-btn" onclick="filterCategory('men')">Men</button>
+      <button class="filter-btn" onclick="filterCategory('women')">Women</button>
+      <button class="filter-btn" onclick="filterCategory('shoes')">Shoes</button>
+      <button class="filter-btn" onclick="filterCategory('accessories')">Accessories</button>
+    </div>
+
+    <div class="product-grid" id="productList">
+      <div class="product" data-category="men" onclick="goToProduct('Varsity Jacket')">
+        <img src="https://i.pinimg.com/474x/47/43/07/474307c11264e9455be6f97a62cd864d.jpg" alt="Varsity Jacket">
+        <h3>Varsity Jacket</h3>
+        <p>Men - Size M - ₹700</p>
+      </div>
+      <div class="product" data-category="women" onclick="goToProduct('Boho Skirt')">
+        <img src="https://i.pinimg.com/474x/e9/1c/af/e91caffe0922dfba0e22dcb24e5a1380.jpg" alt="Boho Skirt">
+        <h3>Boho Skirt</h3>
+        <p>Women - Size S - ₹550</p>
+      </div>
+      <div class="product" data-category="accessories" onclick="goToProduct('Heart Pendant')">
+        <img src="https://i.pinimg.com/474x/d0/bd/b7/d0bdb7e5cfd56c801ed218286eebf994.jpg" alt="Heart Pendant">
+        <h3>Heart Pendant</h3>
+        <p>Accesories - Size Freesize - ₹200</p>
+      </div>
+      <div class="product" data-category="women" onclick="goToProduct('Corset Dress')">
+        <img src="https://i.pinimg.com/474x/36/54/99/3654990c2a956f7dfcad1b4f90e4f56e.jpg" alt="Corset Dress">
+        <h3>Corset Dress</h3>
+        <p>Women - Size S - ₹600</p>
+      </div>
+      <div class="product" data-category="accessories" onclick="goToProduct('Canvas Tote Bag')">
+        <img src="https://i.pinimg.com/474x/67/46/69/6746694ed981136a567ea13fe9742429.jpg" alt="Tote Bag">
+        <h3>Canvas Tote Bag</h3>
+        <p>Eco-friendly - ₹350</p>
+      </div>
+      <div class="product" data-category="shoes" onclick="goToProduct('Retro Sneakers')">
+        <img src="https://i.pinimg.com/474x/af/13/06/af13061266a37a5ab899de5759d57dda.jpg" alt="Retro Sneakers">
+        <h3>Retro Sneakers</h3>
+        <p>Size 8 - ₹950</p>
+      </div>
+      <div class="product" data-category="women" onclick="goToProduct('Vintage Tee')">
+        <img src="https://i.pinimg.com/474x/a0/44/64/a044647d4600a8175c7945b2fd1cfcc5.jpg" alt="Vintage Tee">
+        <h3>Vintage Tee</h3>
+        <p>Women - Size L - ₹400</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Shop sustainably, dress responsibly ♻️</p>
+  </footer>
+
+  <script>
+    function searchItems() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const products = document.querySelectorAll('.product');
+
+      products.forEach(product => {
+        const text = product.textContent.toLowerCase();
+        product.style.display = text.includes(input) ? 'block' : 'none';
+      });
+    }
+
+    function filterCategory(category) {
+      const products = document.querySelectorAll('.product');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    }
+
+    function goToProduct(productName) {
+      const urlName = encodeURIComponent(productName);
+      window.location.href = `item.html?name=${urlName}`;
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell with ReNova</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://clothedup.com/wp-content/uploads/2020/08/image-1-2048x1536.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            backdrop-filter: blur(8px);
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px 15px;
+            border-radius: 12px;
+            transition: 0.3s;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
+        }
+
+        .container {
+            padding: 120px 20px 40px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2.5rem;
+            color: #FFEB3B;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.6);
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            font-size: 1rem;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .nav-item {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-item"><a href="index.html">Home</a></div>
+        <div class="nav-item"><a href="community.html">Communities</a></div>
+        <div class="nav-item"><a href="impact.html">Impact Tracker</a></div>
+        <div class="nav-item"><a href="shop.html">Shop</a></div>
+        <div class="nav-item active"><a href="sell.html">Sell</a></div>
+        <div class="nav-item"><a href="contact.html">Contact</a></div>
+    </nav>
+
+    <div class="container">
+        <h1>Sell Your Item</h1>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Product Title" required>
+            <textarea rows="4" placeholder="Product Description" required></textarea>
+            <input type="number" placeholder="Price ($)" required>
+            <select required>
+                <option value="">Select Category</option>
+                <option value="clothing">Clothing</option>
+                <option value="accessories">Accessories</option>
+                <option value="home-decor">Home Decor</option>
+                <option value="others">Others</option>
+            </select>
+            <input type="url" placeholder="Image URL" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>Thank you for contributing to sustainable fashion.</p>
+    </footer>
+</body>
+</html>
